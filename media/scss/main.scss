@@ -1,7 +1,7 @@
 @import 'compass/css3';
 
 body {
-  background:#f0f0f0;
+  background:#f9f9f9;
   @include transition(background 1s);
   padding:0;
   margin:0;
@@ -61,16 +61,25 @@ div#header {
 
 div.bar {
   box-sizing:border-box;
-  padding:10px;
+  padding:2px;
+}
+
+h1 {
+  font-size:25px;
+}
+
+h2 {
+  font-size:18px;
+  font-weight:lighter;
+  border-left:3px solid #999;
+  padding-left:6px;
 }
 
 div#bar1 {
+  // @include background(radial-gradient(color-stops(#55f7ca, #238e9f, #446791, #3c3f6b, #172541), top left));
   background:#1d2144;
-
-  h1 {
-    font-size:65px;
-    color:#eee;
-  }
+  padding:5px;
+  color:#fff;
 }
 
 div#bar2 {
@@ -87,10 +96,11 @@ div#bar4 {
 
 div#bar5 {
   background:#00ffc8;
-  padding:5px;
 }
 
 div#content {
+  margin-top:20px;
+
   p {
     color:#333;
     font-size:16px;
@@ -134,3 +144,25 @@ div#content {
   }
 }
 
+div.square {
+  float:left;
+  width:50%;
+  height:100px;
+  cursor:pointer;
+
+  &:hover {
+    background:white;
+  }
+}
+
+p#sentence {
+  position:relative;
+
+  &.invisible {
+    color: #f0f0f0;
+  }
+
+  span {
+    @include transition(transform 1000ms ease-in-out);
+  }
+}
