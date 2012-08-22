@@ -12,7 +12,7 @@ var spans;
 var sentences = ["We are a boutique software development firm located in sunny *Beverly Hills, California*."];
 var fadeins = [];
 var duration = 1000;
-var interval = 5000;
+var interval = 6000;
 
 function randomTransform() {
     var s = "translate(" + randomInteger(1000, 3000) + "px, " + randomInteger(1000, 3000) + "px) scale(" + Math.random() * 10 + ")";
