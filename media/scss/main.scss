@@ -9,7 +9,7 @@ body {
 }
 
 div.wrapper {
-  width:960px;
+  width:600px;
   margin:0 auto;
 }
 
@@ -153,6 +153,10 @@ div.square {
   &:hover {
     background:white;
   }
+}
+
+p {
+  line-height: 140%;
 }
 
 p#sentence {
