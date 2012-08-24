@@ -15,6 +15,27 @@
   }
 }
 
+@mixin animation($animation) {
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+}
+
+@mixin animation-timing-function($function) {
+  -moz-function-timing-function: $function;
+  -webkit-function-timing-function: $function;
+  -ms-function-timing-function: $function;
+  -o-function-timing-function: $function;
+}
+
+@mixin animation-fill-mode($mode) {
+  -moz-mode-fill-mode: $mode;
+  -webkit-mode-fill-mode: $mode;
+  -ms-mode-fill-mode: $mode;
+  -o-mode-fill-mode: $mode;
+}
+
 body {
   background:#f9f9f9;
   @include transition(background 1s);
@@ -24,8 +45,9 @@ body {
 }
 
 div.wrapper {
-  width:600px;
+  width:640px;
   margin:0 auto;
+  position:relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -115,6 +137,7 @@ div#bar5 {
 
 div#content {
   margin-top:20px;
+  position:relative;
 
   p {
     color:#333;
@@ -172,6 +195,7 @@ div.square {
 
 p {
   line-height: 140%;
+  z-index:1;
 }
 
 p#sentence {
@@ -193,12 +217,6 @@ p#sentence {
       -webkit-animation: bounce 2s;
       -webkit-animation-fill-mode: both;
     }
-  }
-}
-
-@include keyframes(two) {
-  to {
-    @include transform(translate(100px, 0));
   }
 }
 
@@ -225,5 +243,73 @@ p#sentence {
   }
   100% {
     @include transform(translate(0px, 0px));
+  }
+}
+
+@include keyframes(fadeout) {
+  from {
+    @include transform(translate(0, 0));
+    @include opacity(1);
+    @include animation-timing-function(ease-in);
+  }
+
+  to {
+    @include transform(translate(0, 25px));
+    @include opacity(0);
+    @include animation-timing-function(ease-out);
+  }
+}
+
+@include keyframes(fadein) {
+  from {
+    @include transform(translate(0, 25px));
+    @include opacity(0);
+    @include animation-timing-function(ease-in);
+  }
+
+  to {
+    @include transform(translate(0, 0));
+    @include opacity(1);
+    @include animation-timing-function(ease-out);
+  }
+}
+
+div#screenshot-container {
+  @include border-radius(5px);
+  @include opacity(0);
+  background:#f9f9f9;
+  border:2px solid #444;
+  display:block;
+  height:140px;
+  left:-200px;
+  position:absolute;
+  top:-140px;
+  width:200px;
+  z-index:0;
+
+  &.fadein {
+    @include animation(fadein 750ms forwards);
+  }
+
+  &.fadeout {
+    @include animation(fadeout 500ms forwards);
+  }
+
+  img#screenshot {
+    width:200px;
+    height:140px;
+    margin-top:2px;
+    z-index:0;
+    @include border-radius(3px);
+  }
+
+  div#arrow {
+    margin:-7px auto 0;
+    width:0;
+    height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:0;
+    border-bottom:5px solid #444;
   }
 }
