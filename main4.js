@@ -16,7 +16,7 @@ $(function() {
             $("img#screenshot").attr("src", src);
             container.removeClass("fadeout");
             container.addClass("fadein");
-            container.css({left: pos.left + (width - 200) / 2 + "px", top: pos.top + height + 12 + "px" });
+            container.css({left: pos.left - 2 + (width - 200) / 2 + "px", top: pos.top + height + 12 + "px" });
         }, function() {
             container.removeClass("fadein");
             container.addClass("fadeout");
