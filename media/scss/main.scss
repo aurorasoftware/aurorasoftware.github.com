@@ -1,5 +1,20 @@
 @import 'compass/css3';
 
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
 body {
   background:#f9f9f9;
   @include transition(background 1s);
@@ -167,6 +182,48 @@ p#sentence {
   }
 
   span {
-    @include transition(transform 1000ms ease-in-out);
+    // @include transition(transform 2000ms ease-in-out);
+    @include transform(translate(0, 500px) scale(1));
+
+    &.plain {
+      @include transform(translate(0, 0) scale(1));
+    }
+
+    &.thing {
+      -webkit-animation: bounce 2s;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+}
+
+@include keyframes(two) {
+  to {
+    @include transform(translate(100px, 0));
+  }
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(translate(0px, 0px));
+    -webkit-animation-timing-function: ease-in;
+  }
+  20% {
+    @include transform(translate(0px, 500px));
+    -webkit-animation-timing-function: ease-out;
+  }
+  40% {
+    @include transform(translate(0px, 250px));
+    -webkit-animation-timing-function: ease-in;
+  }
+  60% {
+    @include transform(translate(0px, 500px));
+    -webkit-animation-timing-function: ease-out;
+  }
+  80% {
+    @include transform(translate(0px, 375px));
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    @include transform(translate(0px, 0px));
   }
 }

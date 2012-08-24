@@ -9,13 +9,13 @@ function randomInteger(min, max) {
 }
 
 var spans;
-var sentences = ["We are a boutique software development firm located in sunny *Beverly Hills, California*."];
+var sentences = ["We are a boutique software development firm located in sunny Beverly Hills, California."];
 var fadeins = [];
 var duration = 1000;
 var interval = 6000;
 
 function randomTransform() {
-    var s = "translate(" + randomInteger(1000, 3000) + "px, " + randomInteger(1000, 3000) + "px) scale(" + Math.random() * 10 + ")";
+    var s = "translate(" + randomInteger(0, 30) + "px, " + randomInteger(0, 30) + "px) scale(" + Math.random() * 10 + ")";
     return {
         "-webkit-transform": s,
         "-moz-transform": s,
@@ -33,6 +33,7 @@ var emptyTransform = {
 
 $(function() {
     displaySentence();
+    /*
     setTimeout(function() {
         fadeout(0);
     }, interval - duration);
@@ -44,6 +45,7 @@ $(function() {
             fadeout(0);
         }, interval - duration);
     }, interval);
+    */
 });
 
 function displaySentence() {
@@ -80,12 +82,31 @@ function displaySentence() {
     spans.each(function(i, elem) {
         $(elem).css({position: "absolute", top: positions[i].top, left: positions[i].left});
         $(elem).css(randomTransform());
+        $(elem).addClass("plain");
+        $(elem).addClass("thing");
     });
 
+    /*
+    apply(function(i) {
+        $(spans[i]).addClass("thing");
+    }, 0);
+    */
+
     $("#sentence").removeClass("invisible");
+    /*
     setTimeout(function() {
         fadein(0);
     }, 5);
+    */
+}
+
+function apply(f, i) {
+    if (i < spans.length) {
+        f(i);
+        setTimeout(function() {
+            apply(f, i+1);
+        }, 20);
+    }
 }
 
 function fadein(i) {
@@ -93,7 +114,7 @@ function fadein(i) {
         $(spans[i]).css(emptyTransform);
         setTimeout(function() {
             fadein(i+1);
-        }, 5);
+        }, 1);
     }
 }
 
