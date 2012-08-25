@@ -650,10 +650,10 @@ div#screenshot-container {
   z-index: 0;
 }
 div#screenshot-container.fadein {
-  -moz-animation: fadein 750ms forwards;
-  -webkit-animation: fadein 750ms forwards;
-  -ms-animation: fadein 750ms forwards;
-  -o-animation: fadein 750ms forwards;
+  -moz-animation: fadein 750ms 500ms forwards;
+  -webkit-animation: fadein 750ms 500ms forwards;
+  -ms-animation: fadein 750ms 500ms forwards;
+  -o-animation: fadein 750ms 500ms forwards;
 }
 div#screenshot-container.fadeout {
   -moz-animation: fadeout 500ms forwards;

@@ -288,7 +288,7 @@ div#screenshot-container {
   z-index:0;
 
   &.fadein {
-    @include animation(fadein 750ms forwards);
+    @include animation(fadein 750ms 500ms forwards);
   }
 
   &.fadeout {
