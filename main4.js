@@ -1,4 +1,5 @@
 var container;
+var fadingIn = false;
 
 $(function() {
     container = $("#screenshot-container");
@@ -17,9 +18,17 @@ $(function() {
             container.removeClass("fadeout");
             container.addClass("fadein");
             container.css({left: pos.left - 2 + (width - 200) / 2 + "px", top: pos.top + height + 12 + "px" });
+            fadingIn = true;
         }, function() {
             container.removeClass("fadein");
             container.addClass("fadeout");
+            fadingIn = false;
         });
+    });
+
+    container.bind('animationend webkitAnimationEnd MSAnimationEnd', function() {
+        if (!fadingIn) {
+            container.css({top: "-140px", left: "-210px"});
+        }
     });
 });
