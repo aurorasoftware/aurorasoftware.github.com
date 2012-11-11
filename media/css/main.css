@@ -67,8 +67,6 @@ h1 {
 h2 {
   font-size: 18px;
   font-weight: lighter;
-  border-left: 3px solid #999;
-  padding-left: 6px;
 }
 
 div#bar1 {
@@ -99,26 +97,6 @@ div#content {
 }
 div#content p {
   color: #333;
-  font-size: 16px;
-}
-div#content ol, div#content ul {
-  margin: 0;
-  padding: 0;
-}
-div#content ol li, div#content ul li {
-  color: #999;
-  font-size: 13px;
-  margin-bottom: 5px;
-}
-div#content ol li p, div#content ul li p {
-  font-size: 16px;
-  color: #333;
-  margin: 0;
-}
-div#content ul {
-  list-style: square;
-}
-div#content ul li {
   font-size: 16px;
 }
 div#content a {
@@ -680,4 +658,63 @@ div#screenshot-container div#arrow {
   border-right: 5px solid transparent;
   border-top: 0;
   border-bottom: 5px solid #444;
+}
+
+div#changelog h3 {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0f1112), color-stop(100%, #4f5960));
+  background: -webkit-linear-gradient(#0f1112, #4f5960);
+  background: -moz-linear-gradient(#0f1112, #4f5960);
+  background: -o-linear-gradient(#0f1112, #4f5960);
+  background: linear-gradient(#0f1112, #4f5960);
+  text-shadow: 1px 1px #444444;
+  margin: 4px 0 2px;
+  padding: 2px 4px;
+  display: inline-block;
+  color: white;
+  font-family: Courier;
+  font-size: 14px;
+  font-weight: normal;
+}
+div#changelog h3 a {
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+div#changelog h3 a:hover {
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0f1112), color-stop(100%, #4f5960));
+  background: -webkit-linear-gradient(#0f1112, #4f5960);
+  background: -moz-linear-gradient(#0f1112, #4f5960);
+  background: -o-linear-gradient(#0f1112, #4f5960);
+  background: linear-gradient(#0f1112, #4f5960);
+}
+div#changelog div.group h2 {
+  margin-top: 15px;
+}
+div#changelog div.group:first-child h2 {
+  margin-top: 0;
+}
+div#changelog div.group div.commit {
+  margin: 4px 0;
+}
+div#changelog div.group div.commit h4 {
+  font-size: 13px;
+  font-weight: normal;
+}
+div#changelog div.group div.commit p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: #333;
+}
+div#changelog div.group div.commit a {
+  font-family: Courier;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
 }

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<script type='text/javascript'>
+  $(function() {
+    $(".group").each(function(i, elem) {
+      var $elem = $(elem);
+      var username = $elem.data("username");
+      var repo = $elem.data("repo");
+      $.get("https://api.github.com/repos/" + username + "/" + repo + "/commits?author=dlo", function(commits) {
+        var html = "<h3><a href='https://github.com/" + username + "/" + repo + "'>" + username + "/" + repo + "</a></h3>";
+        for (var i in commits) {
+          var payload = commits[i];
+          var idx = payload.commit.message.indexOf("\n");
+          var title = payload.commit.message.substring(0, idx);
+          var longMessage = payload.commit.message.substring(idx);
+          var sha = payload.sha;
+          if (idx === -1) {
+            html += "<div class='commit' title='" + sha + "'><h4><a href='https://github.com/" + username + "/" + repo + "/commit/" + sha + "'>" + sha.substring(0, 7) + "</a> " + payload.commit.message + "</h4></div>";
+          }
+          else {
+            html += "<div class='commit' title='" + sha + "'><h4><a href='https://github.com/" + username + "/" + repo + "/commit/" + sha + "'>" + sha.substring(0, 7) + "</a> " + title + "</h4><p>" + longMessage + "</p></div>";
+          }
+        }
+        $elem.html(html);
+      });
+    });
+  });
+</script>
+<div class='wrapper'>
+  <div id='changelog'>
+    <p>We &lt;3 open source, and we think the best way to show our support is to contribute to software that others use and contribute to within the community.</p>
+    <p>This is an up-to-date log of all the open-source work our team has contributed in the recent past. We call it the change log.</p>
+
+    <div class='group' data-username="ConradIrwin" data-repo="jist" data-author="dlo"></div>
+    <div class='group' data-username='aurorasoftware' data-repo='django-statictastic'></div>
+  </div>
+</div>
