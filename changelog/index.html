@@ -7,7 +7,7 @@ layout: default
       var $elem = $(elem);
       var username = $elem.data("username");
       var repo = $elem.data("repo");
-      $.getJSON("https://api.github.com/repos/" + username + "/" + repo + "/commits?author=dlo", function(commits) {
+      $.getJSON("https://api.github.com/repos/" + username + "/" + repo + "/commits?author=dlo&callback=?", function(commits) {
         var html = "<h3><a href='https://github.com/" + username + "/" + repo + "'>" + username + "/" + repo + "</a></h3>";
         for (var i in commits) {
           var payload = commits[i];
