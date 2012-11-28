@@ -33,7 +33,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	$('#tweets').tweetable({username: 'ipinboard', time: true, limit: 2, replies: true, position: 'append'});
+	$('#tweets').tweetable({username: 'pushpin_app', time: true, limit: 2, replies: true, position: 'append'});
 });
 
 $(document).ready(function() {
