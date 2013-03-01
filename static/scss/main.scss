@@ -147,6 +147,18 @@ div#content {
     color:#333;
     border-bottom:1px dashed #999;
 
+    &.twitter {
+      @include background(image-url("bird_blue_16.png") no-repeat);
+      width:16px;
+      height:11px;
+      border-bottom:none;
+      display:inline-block;
+
+      &:hover {
+        @include background(image-url("bird_black_16_0.png") no-repeat);
+      }
+    }
+
     &:hover {
       // cursor:wait;
       background:#ffc;
@@ -398,7 +410,7 @@ div.css-logo {
   @include background(image-url("word-mark-50.png") 5*$unit+10 no-repeat #05003a);
   overflow:hidden;
   position:relative;
-  margin:15px auto;
+  margin:15px 0;
 
   > div.black-rounded-container {
     > div.black-rounded {
@@ -503,3 +515,4 @@ div.css-logo {
 div.clear {
   clear:both;
 }
+

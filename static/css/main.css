@@ -104,6 +104,16 @@ div#content a {
   color: #333;
   border-bottom: 1px dashed #999;
 }
+div#content a.twitter {
+  background: url('../img/bird_blue_16.png?1362118689') no-repeat;
+  width: 16px;
+  height: 11px;
+  border-bottom: none;
+  display: inline-block;
+}
+div#content a.twitter:hover {
+  background: url('../img/bird_black_16_0.png?1362118786') no-repeat;
+}
 div#content a:hover {
   background: #ffc;
   text-decoration: dashed;
@@ -1165,7 +1175,7 @@ div.css-logo {
   background: url('../img/word-mark-50.png?1362117264') 60px no-repeat #05003a;
   overflow: hidden;
   position: relative;
-  margin: 15px auto;
+  margin: 15px 0;
 }
 div.css-logo > div.black-rounded-container > div.black-rounded {
   -moz-border-radius-topright: 10px;
