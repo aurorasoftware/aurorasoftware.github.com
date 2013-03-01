@@ -1,7 +1,8 @@
 http_path = "/"
-css_dir = "media/css"
-sass_dir = "media/scss"
-images_dir = "media/img"
-javascripts_dir = "media/js"
-relative_assets = true
+css_dir = "static/css"
+sass_dir = "static/scss"
+images_dir = "static/img"
+fonts_dir = "static/fonts"
+javascripts_dir = "static/js"
 line_comments = false
+relative_assets = true

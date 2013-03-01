@@ -9,7 +9,7 @@ $(function() {
         var width = elem.width();
         var height = elem.height();
         var pos = elem.position();
-        var src = "media/img/" + elem.attr("img");
+        var src = "static/img/" + elem.attr("img");
         img = new Image()
         img.src = src;
 
