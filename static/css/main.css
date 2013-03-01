@@ -1175,7 +1175,7 @@ div.css-logo {
   background: url('../img/word-mark-50.png?1362117264') 60px no-repeat #05003a;
   overflow: hidden;
   position: relative;
-  margin: 15px 0;
+  margin: 15px auto;
 }
 div.css-logo > div.black-rounded-container > div.black-rounded {
   -moz-border-radius-topright: 10px;
