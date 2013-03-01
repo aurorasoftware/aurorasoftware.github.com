@@ -391,14 +391,14 @@ div#changelog {
   }
 }
 
-$unit: 5px;
+$unit: 10px;
 div.css-logo {
   height:5 * $unit;
-  width:179px + 5 * $unit;
-  @include background(image-url("word-mark-25-nocopy.png") 5*$unit+10 no-repeat #05003a);
+  width:10px + 281px + 5 * $unit;
+  @include background(image-url("word-mark-50.png") 5*$unit+10 no-repeat #05003a);
   overflow:hidden;
   position:relative;
-  margin:5px 0;
+  margin:15px auto;
 
   > div.black-rounded-container {
     > div.black-rounded {

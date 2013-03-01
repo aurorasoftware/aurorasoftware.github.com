@@ -1160,33 +1160,33 @@ div#changelog div.group div.commit a {
 }
 
 div.css-logo {
-  height: 25px;
-  width: 204px;
-  background: url('../img/word-mark-25-nocopy.png?1362116859') 35px no-repeat #05003a;
+  height: 50px;
+  width: 341px;
+  background: url('../img/word-mark-50.png?1362117264') 60px no-repeat #05003a;
   overflow: hidden;
   position: relative;
-  margin: 5px 0;
+  margin: 15px auto;
 }
 div.css-logo > div.black-rounded-container > div.black-rounded {
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
   background: #05003a;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   position: absolute;
   z-index: 1;
 }
 div.css-logo > div.black-rounded-container > div.black-rounded:nth-child(1) {
-  top: 5px;
-  left: 5px;
+  top: 10px;
+  left: 10px;
 }
 div.css-logo > div.black-rounded-container > div.black-rounded:nth-child(2) {
-  top: 15px;
-  left: 15px;
+  top: 30px;
+  left: 30px;
 }
 div.css-logo > div.black-gradient-container > div.black-gradient {
-  width: 5px;
+  width: 10px;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #05003a), color-stop(35%, transparent));
   background: -webkit-linear-gradient(#05003a, transparent 35%);
   background: -moz-linear-gradient(#05003a, transparent 35%);
@@ -1197,76 +1197,76 @@ div.css-logo > div.black-gradient-container > div.black-gradient {
   z-index: 2;
 }
 div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(1) {
-  height: 5px;
-}
-div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(2) {
-  left: 5px;
   height: 10px;
 }
-div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(3) {
+div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(2) {
   left: 10px;
-  height: 15px;
-}
-div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(4) {
-  left: 15px;
   height: 20px;
 }
-div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(5) {
+div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(3) {
   left: 20px;
-  height: 25px;
+  height: 30px;
+}
+div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(4) {
+  left: 30px;
+  height: 40px;
+}
+div.css-logo > div.black-gradient-container > div.black-gradient:nth-child(5) {
+  left: 40px;
+  height: 50px;
 }
 div.css-logo > div.color-column-container {
   position: relative;
 }
 div.css-logo > div.color-column-container > div.color-column {
-  width: 5px;
+  width: 10px;
   position: absolute;
   top: 0;
   z-index: 0;
 }
 div.css-logo > div.color-column-container > div.color-column:nth-child(odd) {
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 div.css-logo > div.color-column-container > div.color-column:nth-child(1) {
   -moz-animation: first-column 5s infinite ease-in-out;
   -webkit-animation: first-column 5s infinite ease-in-out;
   -ms-animation: first-column 5s infinite ease-in-out;
   -o-animation: first-column 5s infinite ease-in-out;
-  height: 5px;
+  height: 10px;
 }
 div.css-logo > div.color-column-container > div.color-column:nth-child(2) {
   -moz-animation: second-column 5s -200ms infinite ease-in-out;
   -webkit-animation: second-column 5s -200ms infinite ease-in-out;
   -ms-animation: second-column 5s -200ms infinite ease-in-out;
   -o-animation: second-column 5s -200ms infinite ease-in-out;
-  left: 5px;
-  height: 10px;
+  left: 10px;
+  height: 20px;
 }
 div.css-logo > div.color-column-container > div.color-column:nth-child(3) {
   -moz-animation: third-column 5s -400ms infinite ease-in-out;
   -webkit-animation: third-column 5s -400ms infinite ease-in-out;
   -ms-animation: third-column 5s -400ms infinite ease-in-out;
   -o-animation: third-column 5s -400ms infinite ease-in-out;
-  left: 10px;
-  height: 15px;
+  left: 20px;
+  height: 30px;
 }
 div.css-logo > div.color-column-container > div.color-column:nth-child(4) {
   -moz-animation: fourth-column 5s -600ms infinite ease-in-out;
   -webkit-animation: fourth-column 5s -600ms infinite ease-in-out;
   -ms-animation: fourth-column 5s -600ms infinite ease-in-out;
   -o-animation: fourth-column 5s -600ms infinite ease-in-out;
-  left: 15px;
-  height: 20px;
+  left: 30px;
+  height: 40px;
 }
 div.css-logo > div.color-column-container > div.color-column:nth-child(5) {
   -moz-animation: fifth-column 5s -800ms infinite ease-in-out;
   -webkit-animation: fifth-column 5s -800ms infinite ease-in-out;
   -ms-animation: fifth-column 5s -800ms infinite ease-in-out;
   -o-animation: fifth-column 5s -800ms infinite ease-in-out;
-  left: 20px;
-  height: 25px;
+  left: 40px;
+  height: 50px;
 }
 
 div.clear {
